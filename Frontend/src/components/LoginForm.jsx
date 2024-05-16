@@ -38,8 +38,9 @@ function LoginForm(props) {
             toast.success('Iniciando sesion...')
             //if(!res.status) return [new Error(`error login user ${userData.name} ${res.statusText}`)]
             const json = res
+            console.log(json)
 
-            return [undefined, json.data]
+            return []
             
         } catch(error) {
             if(error instanceof Error) {
