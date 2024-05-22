@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import '../stylesheets/LoginForm.css'
 import axios from 'axios'
 import { Toaster, toast } from 'sonner'
-function LoginForm(props) {
+function LoginForm() {
 
     const [loading, setLoading] = useState(false)
     const [loggedIn, setLoggedIn] = useState(false)
@@ -19,7 +19,6 @@ function LoginForm(props) {
             ...userData,
             [name] : value
         })
-        console.log(userData)
     }
     
     const handleSubmit = async e => {
@@ -36,15 +35,15 @@ function LoginForm(props) {
             const res = await axios.post('http://localhost:3000/api/login', userData)
             console.log(res.data,res.json)
             toast.success('Iniciando sesion...')
-            //if(!res.status) return [new Error(`error login user ${userData.name} ${res.statusText}`)]
-            const json = res
-            console.log(json)
+            if(!res.status) return [new Error(`error login user ${userData.name} ${res.statusText}`)]
+            //const json = res
+            //console.log(json)
 
             return []
             
         } catch(error) {
             if(error instanceof Error) {
-                console.log('aca')
+                console.log()
                 toast.error(error.response.data.message)
                 return [error]
             }

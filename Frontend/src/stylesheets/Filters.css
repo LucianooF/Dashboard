@@ -1,0 +1,15 @@
+.filters-container-fluid{
+    display: flex;
+    height: auto;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+    padding: 25px;
+    margin: 25px;
+    border-radius: 10px;
+}
+
+.row {
+    display: flex;
+}

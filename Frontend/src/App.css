@@ -1,22 +1,17 @@
-#root {
-  max-width: 1280px;
+.page-flex {
+  max-width: 100%;
+  height: 100%;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: rgb(110, 110, 120);
 }
 
-.body,
-html {
-  color: white;
-  background-color: #1b1b32;
-  font-family: sans-serif;
-  margin-top: 40px;
-}
 
-h1 {
-  color: #ffffff;
-  font-size: 25px;
-  font-family: Roboto, sans-serif;
-  text-align: center;
-  margin: 20px 0;
+
+.container-fluid{
+  background-color: rgb(150, 115, 115);
+  padding: 5px;
+  margin: 5px;
+
 }
